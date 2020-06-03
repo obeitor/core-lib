@@ -1,5 +1,8 @@
 package com.softobt.core.logger.models;
-
+/**
+ * @author aobeitor
+ * @since 05/15/19
+ */
 import org.slf4j.LoggerFactory;
 
 import java.util.logging.Logger;

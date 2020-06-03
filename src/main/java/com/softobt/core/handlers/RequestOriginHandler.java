@@ -1,5 +1,8 @@
 package com.softobt.core.handlers;
-
+/**
+ * @author aobeitor
+ * @since 05/15/19
+ */
 import com.softobt.core.logger.services.LoggerService;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;

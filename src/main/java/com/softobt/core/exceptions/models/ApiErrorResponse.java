@@ -1,5 +1,8 @@
 package com.softobt.core.exceptions.models;
-
+/**
+ * @author aobeitor
+ * @since 05/15/19
+ */
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.softobt.core.api.ApiResponse;
 import com.softobt.core.api.ApiResponseEnvelop;

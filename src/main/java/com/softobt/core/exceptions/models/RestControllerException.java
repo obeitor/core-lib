@@ -1,6 +1,9 @@
 package com.softobt.core.exceptions.models;
 
-
+/**
+ * @author aobeitor
+ * @since 05/15/19
+ */
 import com.softobt.core.exceptions.enums.ErrorCode;
 
 public class RestControllerException extends Exception {

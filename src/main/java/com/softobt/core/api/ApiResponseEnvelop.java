@@ -1,7 +1,13 @@
 package com.softobt.core.api;
+/**
+ * @author aobeitor
+ * @since 05/15/19
+ */
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.softobt.core.logger.services.LoggerService;
+
+import java.time.LocalDateTime;
 
 public class ApiResponseEnvelop implements ApiResponse{
 
@@ -28,6 +34,9 @@ public class ApiResponseEnvelop implements ApiResponse{
         if(this.response == null){
             return ResponseType.EMPTY;
         }
+        if(this.response instanceof LocalDateTime){
+            return ResponseType.DATETIME;
+        }
         if(this.response instanceof String){
             return ResponseType.TEXT;
         }
@@ -43,20 +52,4 @@ public class ApiResponseEnvelop implements ApiResponse{
         return ResponseType.OBJECT;
     }
 
-
-    public class StringValue{
-        private String value;
-
-        public StringValue(String value) {
-            this.value = value;
-        }
-
-        public String getValue() {
-            return value;
-        }
-
-        public void setValue(String value) {
-            this.value = value;
-        }
-    }
 }

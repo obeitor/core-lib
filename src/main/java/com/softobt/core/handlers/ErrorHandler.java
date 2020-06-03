@@ -1,9 +1,10 @@
 package com.softobt.core.handlers;
-
-import com.softobt.core.exceptions.models.RestControllerException;
+/**
+ * @author aobeitor
+ * @since 05/15/19
+ */
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.NoHandlerFoundException;

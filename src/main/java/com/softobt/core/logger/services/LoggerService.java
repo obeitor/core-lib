@@ -1,8 +1,9 @@
 package com.softobt.core.logger.services;
-
-import com.softobt.core.handlers.ErrorHandler;
+/**
+ * @author aobeitor
+ * @since 05/15/19
+ */
 import com.softobt.core.logger.models.CoreLogger;
-import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletRequest;
 

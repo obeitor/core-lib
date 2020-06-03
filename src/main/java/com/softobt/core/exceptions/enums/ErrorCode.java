@@ -1,5 +1,8 @@
 package com.softobt.core.exceptions.enums;
-
+/**
+ * @author aobeitor
+ * @since 05/15/19
+ */
 public enum ErrorCode {
     UNKNOWN_ERROR(100),
     BAD_PATH_PARAM(20),

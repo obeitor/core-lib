@@ -1,34 +1,28 @@
 package com.softobt.core.handlers;
-
+/**
+ * @author aobeitor
+ * @since 05/15/19
+ */
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.softobt.core.api.ApiResponse;
 import com.softobt.core.api.ApiResponseEnvelop;
 import com.softobt.core.exceptions.enums.ErrorCode;
 import com.softobt.core.exceptions.models.ApiErrorResponse;
 import com.softobt.core.exceptions.models.RestControllerException;
 import com.softobt.core.exceptions.models.RestServiceException;
 import com.softobt.core.logger.services.LoggerService;
-import jdk.nashorn.internal.ir.debug.JSONWriter;
-import jdk.nashorn.internal.parser.JSONParser;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.http.server.ServerHttpRequest;
 import org.springframework.http.server.ServerHttpResponse;
 import org.springframework.lang.Nullable;
-import org.springframework.stereotype.Service;
 import org.springframework.validation.FieldError;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.NoHandlerFoundException;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
@@ -104,7 +98,6 @@ public class RestControllerAdvice implements ResponseBodyAdvice<Object> {
     }
 
     public boolean supports(MethodParameter methodParameter, Class aClass) {
-
         return true;
     }
 }

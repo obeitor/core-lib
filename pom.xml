@@ -10,6 +10,11 @@
     <packaging>jar</packaging>
 
     <name>core-lib</name>
+    <developers>
+        <developer>
+            <name>Abdulgafar Obeitor</name>
+        </developer>
+    </developers>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
