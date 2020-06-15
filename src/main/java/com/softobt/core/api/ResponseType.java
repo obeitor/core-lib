@@ -10,5 +10,6 @@ public enum ResponseType {
     OBJECT,
     LIST,
     BOOLEAN,
-    DATETIME
+    DATETIME,
+    AUTHENTICATION
 }

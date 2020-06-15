@@ -49,6 +49,9 @@ public class ApiResponseEnvelop implements ApiResponse{
         if(this.response instanceof Iterable){
             return ResponseType.LIST;
         }
+        if(this.response instanceof TokenDetail){
+            return ResponseType.AUTHENTICATION;
+        }
         return ResponseType.OBJECT;
     }
 

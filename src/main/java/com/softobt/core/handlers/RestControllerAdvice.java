@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.softobt.core.api.ApiResponseEnvelop;
 import com.softobt.core.exceptions.enums.ErrorCode;
 import com.softobt.core.exceptions.models.ApiErrorResponse;
+import com.softobt.core.exceptions.models.CredentialException;
 import com.softobt.core.exceptions.models.RestControllerException;
 import com.softobt.core.exceptions.models.RestServiceException;
 import com.softobt.core.logger.services.LoggerService;
@@ -50,6 +51,12 @@ public class RestControllerAdvice implements ResponseBodyAdvice<Object> {
     public ResponseEntity<ApiErrorResponse> handleRuntimeExceptions(RuntimeException ex){
         loggerService.severe(ex);
         return new ResponseEntity<>(new ApiErrorResponse(new RestControllerException()),HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @ExceptionHandler(CredentialException.class)
+    public ResponseEntity<ApiErrorResponse> handleCredentialExceptions(CredentialException ex){
+        loggerService.warn(CredentialException.class,ex.getMessage());
+        return new ResponseEntity<>(new ApiErrorResponse(new RestControllerException(ex.getMessage(),ErrorCode.BAD_AUTHORIZATION)), HttpStatus.UNAUTHORIZED);
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
