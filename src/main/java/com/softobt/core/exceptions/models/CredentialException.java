@@ -4,7 +4,7 @@ package com.softobt.core.exceptions.models;
  * @author aobeitor
  * @since 6/3/20
  */
-public class CredentialException extends Exception {
+public class CredentialException extends RestServiceException {
     private CredentialExceptionType code;
     public CredentialException(CredentialExceptionType type) {
         super(type==null ? CredentialExceptionType.DEFAULT_ERROR.getMsg():type.getMsg());
